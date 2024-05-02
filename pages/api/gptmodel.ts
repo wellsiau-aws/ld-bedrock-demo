@@ -41,8 +41,5 @@ export default async function handler(
       res.status(200).json(output);
     }
 
-  } else if (req.method === 'GET') {
-    const model = await ldClient.variation("aimodelprovider", jsonObject, 'openai');
-    res.status(200).json({ aimodelprovider: model })
   }
 }
