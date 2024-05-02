@@ -161,7 +161,10 @@ export default function Home() {
 
   async function login() {
     updateContext({});
-    signIn();
+    signIn(undefined, { 
+      redirect: true,
+      callbackUrl: '/'
+    });
   }
 
   async function logout() {

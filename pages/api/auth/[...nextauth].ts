@@ -18,7 +18,7 @@ export default NextAuth({
       },
       async authorize(credentials, req) {
         // Dummy user for demo purpose only
-        const user = { id: "1", name: credentials?.username, email: credentials?.username }
+        const user = { id: "1", name: credentials?.username, email: credentials?.email }
 
         if (user) {
           // Any object returned will be saved in `user` property of the JWT
@@ -35,4 +35,11 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_SECRET || "",
     }),
   ],
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      return url.startsWith(baseUrl)
+        ? Promise.resolve(url)
+        : Promise.resolve(baseUrl);
+    }
+  },
 })
