@@ -200,7 +200,6 @@ export default function Home() {
           client?.identify(parsedContext);
         setCookie("ldcontext", JSON.stringify(parsedContext));
         setBetaOptIn(parsedContext.user.betaModel);
-        console.log(ssai)
       } else {
         console.log("Not signed in");
         const context: any = getCookie("ldcontext");

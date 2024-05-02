@@ -42,4 +42,5 @@ export default NextAuth({
         : Promise.resolve(baseUrl);
     }
   },
+  secret: process.env.SECRET
 })
