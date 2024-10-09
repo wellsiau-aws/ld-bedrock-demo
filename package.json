@@ -31,7 +31,7 @@
     "class-variance-authority": "^0.6.1",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
-    "cookies-next": "^2.1.2",
+    "cookies-next": "^4.3.0",
     "launchdarkly-node-server-sdk": "^7.0.2",
     "launchdarkly-react-client-sdk": "^3.0.7",
     "lucide-react": "^0.260.0",
